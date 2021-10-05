@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs") %>
+
+<!-- <form action="/posts" method="POST"> -->
+<form action="/cohorts" method ="POST" class="container">
+    <div>
+        <label class="form-label" for="url" >Logo Url</label>
+        <br>
+        <input type="text" name="url"  class="form-control" type="text" aria-label="default input example" placeholder="e.g. https://www.example.com/some.png" >
+    </div>
+    <br>
+    <div>
+        <label class="form-label" for="name">Name</label>
+        <br>
+        <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Flying Funks">
+    </div>
+    <br>
+    <div>
+        <label class="form-label" for="members">Members</label>
+        <br>
+    <textarea name="members" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jon Snow, Daenerys, Melisandre, Arya Stark"></textarea>
+    <!-- <input type="text" name="members" for="exampleFormControlTextarea1" class="form-label"> -->
+    </div>
+    <br>
+    <br>
+    <div>
+        <input type="submit" class="btn btn-outline-primary" value="Submit">
+    </div>
+    
+</form>
+
+
+<%- include("../partials/footer.ejs") %>

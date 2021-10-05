@@ -1,0 +1,75 @@
+<%- include("../partials/header.ejs") %>
+<br>
+<div class="container">
+   
+    <div>
+        <h5><%=cohort.title%> </h5> 
+            <p class="card-text"><%=cohort.content%></p>
+
+            <div class="d-grid gap-2">
+                <a href="/cohorts/<%= cohort.id%>/edit" class="btn btn-outline-primary">Edit</a>
+            </div>
+            <br>
+            <form action="/cohorts/<%= cohort.id%>" method="POST">
+                <div class="d-grid gap-2">
+                    <input type='hidden' name = "_method" value="DELETE">
+                    <input type="submit" class="btn btn-outline-primary" value="Delete Cohort">
+                </div>
+            </form>
+    </div>
+    <form action="/cohorts/<%= cohort.id%>/assign_team">
+    <br>
+        <input class="form-check-input" value="TeamCount" type="radio" name="team_method" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+            Team Count
+        </label>
+   
+        <div>
+        <input class="form-check-input" value="numPerTeam" type="radio" name="team_method" id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2">
+            Number Per Team
+        </label>
+    </div>
+    <br>
+
+    <div>
+        <label for="quantity"  >Quantity</label>
+        <br>
+        <input name="quantity" type="text" class="form-control" id="floatingInput">
+    
+    </div>
+
+        <br>
+        <div class="d-grid gap-2">    
+            <input class="btn btn-outline-primary" type ="submit" value= "Assign Teams">
+        </div> 
+        <br>
+</form>
+        <label for="members" ># Members</label>
+        <br><br>
+        <div class="card" >
+        <!-- <ul class="list-group list-group-flush"> -->
+            <div>
+            
+
+        </div> 
+        
+         
+        <!-- <%# if(name) {%>
+            <h3><%# name %> </h3> 
+        <%# } %> 
+        <form action="/random_person">
+            <label for="names">Enter a list of names</label>
+            <input type="text" name="names" >
+            <input type="submit" value="Submit">
+        </form> -->
+            <!-- ----------------------------- -->
+           
+        </ul>
+</div>
+      
+</div> 
+
+<%- include("../partials/footer.ejs") %>
+
+

@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="border" class="rounded-3">
+    <br>
+    <form action="/cohorts/<%=cohort.id%>" method ="POST" class="container">
+        <div>
+            <label class="form-label" for="url" >Logo Url</label>
+            <br>
+            <input type="text" value ="<%=cohort.imageUrl%> " name="url"  class="form-control" type="text" aria-label="default input example" placeholder="e.g. https://www.example.com/some.png">
+        </div>
+        <br>
+        <div>
+
+            <label class="form-label" for="name">Name</label>
+            <br>
+            <input type="text" value ="<%=cohort.title%>" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Flying Funks">
+        </div>
+        <br>
+        <div>
+            <label class="form-label" for="members">Members</label>
+            <br>
+        <textarea name="members" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jon Snow, Daenerys, Melisandre, Arya Stark"><%=cohort.content%></textarea>
+        </div>
+        <br>
+        <br>
+        <div>
+            <input type='hidden' name = "_method" value="PATCH">
+            <button type="submit" class="btn btn-outline-primary float-right">Submit</button>
+        </div>
+        
+    </form>
+    <br>
+</div>
+
+<%- include("../partials/footer.ejs") %>
+

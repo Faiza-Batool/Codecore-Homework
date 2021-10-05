@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') %> 
+
+<!-- <div class="border"> -->
+<br>
+    <% for(let cohort of list) { %> 
+        <div class="container">
+            <div class="card" >
+                <div class="card-body">
+                    <nav class="nav justify-content-left">
+                        <ul>
+                            <img src="<%-cohort.imageUrl%>" class="rounded-circle" class="rounded float-start" class="d-inline-block align-top"  width="30" height="30" alt="img">
+                        </ul>
+                        <ul> 
+                            <h5><%=cohort.title%> </h5> 
+                        </ul> 
+                    </nav>
+                
+                    <p class="card-text"><%=cohort.content%></p>
+                    <a href="/cohorts/<%= cohort.id%>" class="btn btn-primary">Show Cohort</a>
+                </div>
+            </div>
+        </div>
+    <br>
+  <% } %> 
+<br>
+<%- include('../partials/footer.ejs') %> 
+
